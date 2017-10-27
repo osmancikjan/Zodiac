@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Zodiac" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,74 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="purple-galaxy-iphone-8-plus-wallpaper-ilikewallpaper_com" translatesAutoresizingMaskIntoConstraints="NO" id="YDS-SF-1wf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your birthday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0Z-D1-G2f">
+                                <rect key="frame" x="16" y="28" width="343" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9EL-t5-Ce3">
+                                <rect key="frame" x="0.0" y="80" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="504918000.33307099">
+                                    <!--2016-12-31 23:00:00 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="en"/>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kozoroh" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0b9-Sr-8El">
+                                <rect key="frame" x="16" y="316" width="343" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kozoroh01" translatesAutoresizingMaskIntoConstraints="NO" id="Tjk-0R-xTF">
+                                <rect key="frame" x="127" y="360" width="120" height="120"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="DGc-R9-Rrf"/>
+                                    <constraint firstAttribute="width" constant="120" id="lVU-ok-UDb"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9EL-t5-Ce3" firstAttribute="top" secondItem="F0Z-D1-G2f" secondAttribute="bottom" constant="16" id="041-h8-2YX"/>
+                            <constraint firstItem="9EL-t5-Ce3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0f2-TR-8hy"/>
+                            <constraint firstAttribute="trailing" secondItem="9EL-t5-Ce3" secondAttribute="trailing" id="5RW-sU-94Z"/>
+                            <constraint firstItem="Tjk-0R-xTF" firstAttribute="top" secondItem="0b9-Sr-8El" secondAttribute="bottom" constant="8" id="8sr-hj-1Gw"/>
+                            <constraint firstItem="Tjk-0R-xTF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BWx-aE-D0i"/>
+                            <constraint firstItem="0b9-Sr-8El" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="FCo-57-yML"/>
+                            <constraint firstItem="0b9-Sr-8El" firstAttribute="top" secondItem="9EL-t5-Ce3" secondAttribute="bottom" constant="20" id="MeR-wr-WCg"/>
+                            <constraint firstItem="0b9-Sr-8El" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Rgy-du-Ib7"/>
+                            <constraint firstItem="F0Z-D1-G2f" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Sea-aL-E8t"/>
+                            <constraint firstItem="F0Z-D1-G2f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="c9y-K0-nUd"/>
+                            <constraint firstItem="YDS-SF-1wf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="iwr-Me-swX"/>
+                            <constraint firstAttribute="trailing" secondItem="YDS-SF-1wf" secondAttribute="trailing" id="kwy-88-aUh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YDS-SF-1wf" secondAttribute="bottom" id="lHu-Yr-30M"/>
+                            <constraint firstItem="YDS-SF-1wf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ndl-RM-r3B"/>
+                            <constraint firstItem="F0Z-D1-G2f" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="zg1-6S-2fR"/>
+                        </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="datePicker" destination="9EL-t5-Ce3" id="NAp-x5-xbj"/>
+                        <outlet property="imgZod" destination="Tjk-0R-xTF" id="IZa-VM-VFz"/>
+                        <outlet property="txtZodName" destination="0b9-Sr-8El" id="a4H-0M-8hj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="297" y="116"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="kozoroh01" width="430" height="424"/>
+        <image name="purple-galaxy-iphone-8-plus-wallpaper-ilikewallpaper_com" width="1080" height="1920"/>
+    </resources>
 </document>
